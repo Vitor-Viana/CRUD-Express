@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('./partials/head'); %>
+    <link rel="stylesheet" href="/static/css/inserir.css">
+</head>
+<body>
+    <%- include('./partials/cabecalho'); %>
+
+    <main>
+        <section>
+            <h2>Cadastrar Cliente</h2>
+            
+            <form action="/inserindo" method="POST">
+                <p>Nome</p>
+                <input type="text" name="nome">
+                
+                <p>Idade</p>
+                <input type="text" name="idade">
+
+                <p>CPF</p>
+                <input type="text" name="cpf">
+
+                <p>Telefone</p>
+                <input type="text" name="telefone">
+
+                <p>E-mail</p>
+                <input type="text" name="email"> <br>
+
+                <input type="submit" value="Adicionar">
+            </form>
+            <a href="/"><div>Voltar</div></a>
+        </section>
+    </main>
+</body>
+</html>

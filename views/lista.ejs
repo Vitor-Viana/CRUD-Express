@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('./partials/head'); %>
+    <link rel="stylesheet" href="/static/css/lista.css">
+</head>
+<body>
+    <%- include('./partials/cabecalho'); %>
+
+    <main>
+        <section>
+            <h2>Lista de Clientes</h2>
+
+            <table border="1">
+                <tr>
+                    <td>ID</td>
+                    <td>Nome</td>
+                    <td>Idade</td>
+                    <td>CPF</td>
+                    <td>Telefone</td>
+                    <td>E-mail</td>
+                    <td>Atualizar</td>
+                    <td>Excluir</td>
+                </tr>
+                <% clientes.forEach(function(cliente, id) { %>
+                    <tr>
+                        <td><%= id%></td>
+                        <td><%= cliente.nome%></td>
+                        <td><%= cliente.idade%></td>
+                        <td><%= cliente.cpf%></td>
+                        <td><%= cliente.telefone%></td>
+                        <td><%= cliente.email%></td>
+                        <td><a href="atualizar/<%= id%>"><img src="/static/img/atualizar.png" alt="atualizar"></a></td>
+                        <td><a href="excluir/<%= id%>"><img src="/static/img/lixo.png" alt="lixo"></a></td>
+                    </tr>
+                <% }) %>
+            </table>
+
+            <a href="/"><- Voltar</a>
+        </section>
+    </main>
+</body>
+</html>

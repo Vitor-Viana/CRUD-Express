@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('./partials/head'); %>
+    <link rel="stylesheet" href="/static/css/inserir.css">
+</head>
+<body>
+    <%- include('./partials/cabecalho'); %>
+
+    <main>
+        <section>
+            <h2>Atualizar Cliente</h2>
+            
+            <form action="/controleDeAtualizacao/<%= id%>" method="POST">
+                <p>Nome</p>
+                <input type="text" name="nome" value="<%= cliente.nome%>">
+                
+                <p>Idade</p>
+                <input type="text" name="idade" value="<%= cliente.idade%>">
+                
+                <p>CPF</p>
+                <input type="text" name="cpf" value="<%= cliente.cpf%>">
+
+                <p>Telefone</p>
+                <input type="text" name="telefone" value="<%= cliente.telefone%>">
+
+                <p>E-mail</p>
+                <input type="text" name="email" value="<%= cliente.email%>"> <br>
+
+                <input type="submit" value="Atualizar">
+            </form>
+
+            <a href="/lista"><div>Voltar</div></a>
+        </section>
+    </main>
+</body>
+</html>

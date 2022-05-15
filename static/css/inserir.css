@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+h2 {
+    color: red;
+    font-size: 30px;
+}
+form input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+a div {
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}

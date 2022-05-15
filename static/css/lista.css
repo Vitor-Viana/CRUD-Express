@@ -1,0 +1,15 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+h2 {
+    color: red;
+    font-size: 30px;
+}
+table {
+    margin: 15px 0 15px 0;
+    font-size: 20px;
+}
+table tr td img {
+    width: 20px;
+}
